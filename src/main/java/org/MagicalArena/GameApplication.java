@@ -1,7 +1,7 @@
-package org.Game;
+package org.MagicalArena;
 
-import org.Game.model.Player;
-import org.Game.service.GameService;
+import org.MagicalArena.model.Player;
+import org.MagicalArena.service.CombatService;
 
 import java.util.Scanner;
 
@@ -34,8 +34,8 @@ public class GameApplication {
         Player playerB = new Player(nameB, healthB, strengthB, attackB);
         scanner.close();
 
-        GameService gameService = new GameService(playerA, playerB);
+        CombatService combatService = new CombatService(playerA, playerB);
 
-        gameService.startFight();
+        combatService.startFight();
     }
 }

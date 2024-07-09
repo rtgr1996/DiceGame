@@ -1,4 +1,4 @@
-package org.Game.model;
+package org.MagicalArena.model;
 
 public class Player {
     String name;

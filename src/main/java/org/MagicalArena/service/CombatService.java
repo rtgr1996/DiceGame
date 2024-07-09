@@ -1,14 +1,14 @@
-package org.Game.service;
+package org.MagicalArena.service;
 
-import org.Game.model.Player;
+import org.MagicalArena.model.Player;
 
 import java.util.Random;
 
-public class GameService {
+public class CombatService {
     private Player playerA;
     private Player playerB;
 
-    public GameService(Player playerA, Player playerB) {
+    public CombatService(Player playerA, Player playerB) {
         this.playerA = playerA;
         this.playerB = playerB;
     }
@@ -58,8 +58,11 @@ public class GameService {
 
         if(playerB.getHealth()-damage <= 0){
             System.out.println("too much damage " + playerB.getName() + " is dead");
+            playerB.setHealth(playerB.getHealth()-damage);
+            return;
         }
         playerB.setHealth(playerB.getHealth()-damage);
+        System.out.println("current health of " + playerB.getName() + " is " + playerB.getHealth());
     }
 
     private int rollDice() {

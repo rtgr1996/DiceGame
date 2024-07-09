@@ -1,8 +1,7 @@
-package org.Game;
+package org.MagicalArena;
 
-import org.Game.model.Player;
-import org.Game.service.GameService;
-import org.junit.jupiter.api.Assertions;
+import org.MagicalArena.model.Player;
+import org.MagicalArena.service.CombatService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,16 +28,16 @@ public class PlayerTest {
 
     @Test
     public void playerAttack() {
-        GameService gameService = new GameService(playerA, playerB);
-        gameService.startFight();
+        CombatService combatService = new CombatService(playerA, playerB);
+        combatService.startFight();
         assertTrue(playerA.getHealth() < 1000);
         assertTrue(playerB.getHealth() < 500);
     }
 
     @Test
     public void anyPlayerAlive() {
-        GameService gameService = new GameService(playerA, playerB);
-        gameService.startFight();
+        CombatService combatService = new CombatService(playerA, playerB);
+        combatService.startFight();
         assertTrue(playerA.isAlive()|| playerB.isAlive());
     }
 }
