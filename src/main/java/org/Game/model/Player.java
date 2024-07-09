@@ -1,4 +1,4 @@
-package org.example.model;
+package org.Game.model;
 
 public class Player {
     String name;

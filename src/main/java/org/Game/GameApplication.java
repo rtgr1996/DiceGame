@@ -1,7 +1,7 @@
-package org.example;
+package org.Game;
 
-import org.example.model.Player;
-import org.example.service.GameService;
+import org.Game.model.Player;
+import org.Game.service.GameService;
 
 import java.util.Scanner;
 

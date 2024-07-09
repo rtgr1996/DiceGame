@@ -1,6 +1,6 @@
-package org.example.service;
+package org.Game.service;
 
-import org.example.model.Player;
+import org.Game.model.Player;
 
 import java.util.Random;
 
